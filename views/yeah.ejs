@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/update">
+   
+</head>
+<body>
+    <div class="conatiner">
+        <h1>LOGIN</h1>
+        <hr>
+        <p class="text-center line">Total of <strong><%= count%></strong> users are connected with our organization!</p>
+        <form action="/register" method="POST">
+            <div class="text-box input-group " style="width: 20%;">
+                <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+           <input type="text" name="username" class="form-control" placeholder="username" style="width: 50%;" required>
+            </div>
+            <div class="text-box input-group " style="width: 20%;">
+                <span class="input-group-addon"><i class="fa fa-key fa-3xs" aria-hidden="true"></i></span>
+           <input type="text" name="password" class="form-control" placeholder="password" style="width: 50%;" required>
+            </div> 
+            <div class="container forgot">
+                <a href="/update" >Forgot password?</a>
+              </div>
+            <button  class="btn btn-success">GO!</button>     
+        </form> 
+    </div>
+</body>
+
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        background:url(https://images.unsplash.com/photo-1515923019249-6b544314450f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60);
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
+         .text-box input{
+            background: none;
+            border: 1px solid black;
+            margin-left: 5%;
+        }
+        h1{
+            padding-left: 45%;
+            padding-top: 10%;
+            margin-bottom: 50px;
+        }
+        .text-box{
+            transform: translate(200%,100%);
+            padding-top: 2%;
+        }
+        hr{
+            color: black;
+            width: 30%;
+            border: 1px solid black;
+        }
+        .text-box .fa{   
+            width: 100%;
+            height: 60%;
+        }
+        .btn{
+            transform: translate(1150%,300%);
+            color: black;
+            font-weight: 600;
+            background: lightcoral;
+            border: lightcoral;
+        }
+        .btn:hover{
+            color: lightcoral;
+            background: black;
+        }
+        .line{
+            font-weight: 300;
+            font-size: 120%;
+        }
+        .forgot{
+        padding-left:40%;
+        transform: translateY(350%);
+    }
+    .forgot a{
+        color: black;
+        font-weight: 300;
+    }
+       
+    </style>
+</html>

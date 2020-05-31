@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/update">
+   
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-toggleable-md bg-inverse navbar-inverse navbar ">
+          <div class="container">
+            <img src="http://chriscline.tk/projects/Responsive_Layout_1/img/logo.png" alt="" class="navbar-brand">
+          </div>
+          <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false">
+            <i class="fa fa-bars"></i>
+          </button>
+          
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto flex-row flex-lg-row justify-content-center">
+              <li class="nav-item active">
+                <a class="nav-link" href="/">HOME
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">WORK</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">CONTACT</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header> 
+      <h1>REVIEWS</h1>
+        <hr>
+        <section class="section2">
+          <div class="row">
+            <% abc.forEach(function(z){%>
+              <div class="col-lg-4 col-sm-6">
+                  <div class="d">
+                  <img src="https://images.unsplash.com/photo-1515923019249-6b544314450f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60" alt="" class="ua">
+                  <div class="card-details">
+                     <h2 class="text-center" style="color: lightcoral;"><%= z.name %></h2>
+                     <p class="text-center" style="color: lightcoral;"><%= z.created_at %></p>
+                     <div class="sfe" style="border: 1px solid lightcoral;">
+                     <li style="color: white;" class="text-center"><%= z.details %></li>
+                     </div>
+                  </div>
+                  </div>
+                  </div>
+                  <%}) %>
+  <div class="container ghi">
+    <h2 class="text-center">Feel free to share your views!</h2>
+    <hr>
+    <div class="container af">
+    <form action="/wxy" method="POST">
+      <div class="text-box input-group ">
+      <input type="text" name="name" class="form-control" placeholder="Name" required>
+    </div>
+      <div>
+        <textarea name="message" id="message" cols="20" rows="4" class="form-control f" placeholder="Enter your review" required></textarea>
+      </div>
+      <button class="btn btn-success">GO!</button>
+    </form>
+    </div>
+  </div>
+
+<style>
+    .btn{
+            transform: translate(150%,100%);
+            color: black;
+            font-weight: 600;
+            background: lightcoral;
+            border: lightcoral;
+        }
+        .text-box input{
+          border: 1px solid black;
+        }
+        .btn:hover{
+            color: lightcoral;
+            background: black;
+        }
+    .af{
+      margin-left: 40%;
+    }   
+    .text-box{
+      width: 20%;
+      margin-top: 3%;
+    }
+    .f{
+      width: 20%;
+      margin-top: 2%;
+      border: 1px solid black;
+    }
+    .nav-link{
+      color: white;
+    }
+    .nav-link:hover{
+      color: lightcoral;
+    }
+    .navbar{
+      background:black;
+      height: 100px;
+    }
+    .nav-item:nth-child(3){
+      margin-right: 30%;
+    }
+    .nav-item{
+      margin-right: 8%;
+    }
+    h1{
+      padding-left: 45%;
+      padding-top: 10%;
+      margin-bottom: 50px;
+    }
+    hr{
+      color: black;
+      width: 30%;
+      border: 1px solid black;
+    } 
+    .d{
+    width: 80%;
+    height: auto;
+    position: relative;
+    margin-left: 8%;
+    margin-top: 5%;
+}
+.d .card-details{
+    overflow: hidden;
+    height:0;
+    width: 110%;
+    background:rgba(0,0,0,0.6);
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 20px;
+    transition: 0.5s;
+}
+.d:hover .card-details{
+    height: 200px;
+    bottom: 0;
+}
+.d img{
+    width: 110%;
+    overflow: hidden;
+    height:300px;
+    z-index: 1;
+}
+.box{
+    width: 50%;
+    height: 100%;
+    background: black;
+    transform: translate(-7%,-35%);
+    z-index: 9;
+    position: absolute;
+    outline: 2px solid lightcoral;
+    outline-offset: -55px;
+    position: relative;   
+}  
+li{
+  list-style-type: none;
+} 
+.sfe{
+  width: 40%;
+  margin: 0 auto;  
+}
+.ghi{
+  margin-top: 10%;
+}
+</style>
+  </body>
+</html>
